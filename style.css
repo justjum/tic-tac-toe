@@ -1,0 +1,14 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.gameboard {
+    display: grid;
+    grid-template-columns: repeat(3, 40px);
+    grid-template-rows: repeat(3, 40px);
+}
+
+.checkspot {
+    width: 30px;
+    height: 30px;
+}

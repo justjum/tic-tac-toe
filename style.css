@@ -2,13 +2,34 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
+.gamestart {
+    display: grid;
+    grid-template-columns: 120px 120px;
+    grid-template-rows: 80px 30px 30px 30px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
 .gameboard {
     display: grid;
-    grid-template-columns: repeat(3, 40px);
-    grid-template-rows: repeat(3, 40px);
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    align-content: center;
+    justify-content: center;
+
 }
 
 .checkspot {
-    width: 30px;
-    height: 30px;
+    width: 90px;
+    height: 90px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px grey;
+    background-color: lightseagreen;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    font-size:xx-large;
 }

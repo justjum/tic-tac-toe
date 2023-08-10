@@ -9,16 +9,28 @@
 </head>
 <body>
     <h1>Tic Tac Toe</h1>
+    <div class="gamestart">
+        
+        <h2>Player 1</h2><h2>Player 2</h2>
+        <div class="player-type">
+        <label for="player1name" class="human"><button>Human</button></label><button>AI</button>
+        </div>
+        <div class="player-type"> 
+            <label for="player2name" class="human"><button>Human</button></label><button>AI</button>
+        </div>
+        <input type="text" class="playername" id="player1name" required><input type="text" class="playername" id="player2name" required>
+        <button class="player1">Load Player 1</button><button class="player2">Load Player 2</button>       
+    </div>
     <div class="gameboard">
-        <button class="checkspot" id="checkspot0"></button>
-        <button class="checkspot" id="checkspot1"></button>
-        <button class="checkspot" id="checkspot2"></button>
-        <button class="checkspot" id="checkspot3"></button>
-        <button class="checkspot" id="checkspot4"></button>
-        <button class="checkspot" id="checkspot5"></button>
-        <button class="checkspot" id="checkspot6"></button>
-        <button class="checkspot" id="checkspot7"></button>
-        <button class="checkspot" id="checkspot8"></button>
+        <div class="checkspot" id="checkspot0"></div>
+        <div class="checkspot" id="checkspot1"></div>
+        <div class="checkspot" id="checkspot2"></div>
+        <div class="checkspot" id="checkspot3"></div>
+        <div class="checkspot" id="checkspot4"></div>
+        <div class="checkspot" id="checkspot5"></div>
+        <div class="checkspot" id="checkspot6"></div>
+        <div class="checkspot" id="checkspot7"></div>
+        <div class="checkspot" id="checkspot8"></div>
     </div>
 </body>
 </html>

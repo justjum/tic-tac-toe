@@ -29,14 +29,18 @@ loadPlayer.forEach((loadPlayerButton) => {
         if (+id === 1) {
             if (document.getElementById("player1name").value === "") {
                 alert("Please enter name for Player 1")
+                return;
             }
             player1 = playerFactory(`${id}`, document.getElementById("player1name").value, "X", 0);
+            loadPlayerButton.removeAttribute("id");
         }
         else if(+id === 2) {
             if (document.getElementById("player2name").value === "") {
                 alert("Please enter name for Player 2")
+                return;
             }
             player2 = playerFactory(`${id}`, document.getElementById("player2name").value, "O", 0);
+            loadPlayerButton.removeAttribute("id");
         }
     });
 });
@@ -135,7 +139,7 @@ const checkForDraw = () => {
     for (let x=0; x < 9; x++) {
         if (gameboard[x] !== "") {
             if (x === 8) {
-                alert("draw");
+                alert("It's a draw...");
                 newGameboard();
             }
         }
@@ -192,11 +196,7 @@ const generateGameboard = () => {
         
         //document.getElementById("new-gameboard").innerHTML = `<div class="checkspot" id="checkspot${x}"></div>`;
     }
-    const resetButton = document.createElement("button");
-    resetButton.setAttribute("class", "reset-button");
-    resetButton.setAttribute("id", "reset-button");
-    resetButton.innerHTML = "New Game";
-    newGameboard.appendChild(resetButton);
+
     loadButtons();
     return 
 };

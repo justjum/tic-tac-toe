@@ -8,29 +8,44 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Tic Tac Toe</h1>
-    <div class="gamestart">
-        
-        <h2>Player 1</h2><h2>Player 2</h2>
-        <div class="player-type">
-        <label for="player1name" class="human"><button>Human</button></label><button>AI</button>
+    <div class="header">
+        <h1>Tic Tac Toe</h1>
+        <div class="scores">
+            <div class="scoreplayer1" id="scoreplayer1">
+                <p class="question1" id="question1">??</p>
+            </div>
+            <div class="scoreplayer2" id="scoreplayer2">
+                <p class="question2" id="question2">??</p>
+            </div>
         </div>
-        <div class="player-type"> 
-            <label for="player2name" class="human"><button>Human</button></label><button>AI</button>
-        </div>
-        <input type="text" class="playername" id="player1name" required><input type="text" class="playername" id="player2name" required>
-        <button class="player1">Load Player 1</button><button class="player2">Load Player 2</button>       
     </div>
-    <div class="gameboard">
-        <div class="checkspot" id="checkspot0"></div>
-        <div class="checkspot" id="checkspot1"></div>
-        <div class="checkspot" id="checkspot2"></div>
-        <div class="checkspot" id="checkspot3"></div>
-        <div class="checkspot" id="checkspot4"></div>
-        <div class="checkspot" id="checkspot5"></div>
-        <div class="checkspot" id="checkspot6"></div>
-        <div class="checkspot" id="checkspot7"></div>
-        <div class="checkspot" id="checkspot8"></div>
+
+    <div class="gamestart" id="gamestart">
+        <h2>Player 1</h2><h2>Player 2</h2>
+        <div><button>Human</button></label><button>AI</button></div>
+        <div><button>Human</button></label><button>AI</button></div>
+        <div>
+            <form action="" class="loadplayer" id="loadPlayer1">
+                <div class="player-type">
+                    <label for="player1name" class="human">
+                    <input type="text" class="playername" id="player1name" required>
+                </div>
+                <button type="submit" class="loadPlayer" id="loadPlayer1">Load Player 1</button>
+            </form>
+        </div>
+        <div>
+            <form action="" class="loadplayer" id="loadPlayer2">
+                <div class="player-type">    
+                    <label for="player2name" class="human"></label>
+                    <input type="text" class="playername" id="player2name" required>    
+                </div>
+                <button type="submit" class="loadPlayer" id="loadPlayer2">Load Player 2</button>
+            </form>
+        </div>
+        <button class="lets-play" id="lets-play">Let's Play!!</button>       
+    </div>
+    <div class="gameboard" id="gameboard">
+
     </div>
 </body>
 </html>

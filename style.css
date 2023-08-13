@@ -30,6 +30,10 @@ button :hover {
     cursor: pointer;
 }
 
+button .human-AI :checked {
+    background-color: black;
+}
+
 .header {
     display: flex;
     justify-content: center;

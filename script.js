@@ -152,8 +152,11 @@ const Gameboard = (() => {
     // function for human AI turn 
     const makeMove = () => {
         if (!currentPlayer.human) {
-            let aiTurn = Math.floor(Math.random() * 8);
-            console.log("aiturn");
+            let aiTurn = Math.floor(Math.random() * 9);
+            while (gameboard[aiTurn] !== "") {
+                aiTurn = Math.floor(Math.random() * 9);
+                console.log("repeat");
+            }
             let checkBox = document.getElementById(`checkspot${aiTurn}`);
             markBoard(aiTurn, checkBox);
         }
@@ -166,6 +169,7 @@ const Gameboard = (() => {
             console.log(checkbox);
             checkbox.innerHTML = currentPlayer.marker;        
             updateGameboard(currentPlayer.marker, id);
+            
             if (checkForWin(currentPlayer.marker)) {
                 return;
             }

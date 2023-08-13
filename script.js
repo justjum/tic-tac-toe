@@ -169,17 +169,21 @@ const Gameboard = (() => {
             console.log(checkbox);
             checkbox.innerHTML = currentPlayer.marker;        
             updateGameboard(currentPlayer.marker, id);
-            
-            if (checkForWin(currentPlayer.marker)) {
-                return;
-            }
-            else if (checkForDraw()) {
-                return;
-            }
-            else {
-                playerTurn(currentPlayer.marker);
-            };
+            const renderTime = setTimeout(stepForward, 100);
+            //stepForward();           
         }
+    }
+
+    const stepForward = () => {
+        if (checkForWin(currentPlayer.marker)) {
+            return;
+        }
+        else if (checkForDraw()) {
+            return;
+        }
+        else {
+            playerTurn(currentPlayer.marker);
+        };
     }
 
 

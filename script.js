@@ -169,7 +169,7 @@ const Gameboard = (() => {
             console.log(checkbox);
             checkbox.innerHTML = currentPlayer.marker;        
             updateGameboard(currentPlayer.marker, id);
-            const renderTime = setTimeout(stepForward, 100);
+            const renderTime = setTimeout(stepForward, 250);
             //stepForward();           
         }
     }
@@ -222,7 +222,7 @@ const Gameboard = (() => {
                 }
                 let updateScore = document.getElementById(`player${currentPlayer.number}-score`);
                 updateScore.innerHTML = currentPlayer.score;
-                alert(`${currentPlayer.name} wins this round!!`);
+                alert(`${currentPlayer.name} wins this round!!`)
                 if (confirm("Play another round?")) {
                     newGameboard();
                 }
@@ -258,6 +258,19 @@ const Gameboard = (() => {
         loadButtons();
         return 
     };
+
+    //function to run the alert-square
+
+    const alertSquare = (alert) => {
+        let alertUpdate = document.getElementById("alert-square");
+        const message = document.createElement("p");
+        message.innerHTML = alert;
+        alertUpdate.appendChild(message);
+        alertUpdate.removeAttribute("hidden", true);
+
+        alertUpdate.setAttribute("hidden", true);
+
+    }
 
 
     return { generateGameboard };

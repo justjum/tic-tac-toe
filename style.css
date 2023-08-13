@@ -10,6 +10,7 @@ body {
 }
 
 .container {
+    position: relative;
     background-color: lightcoral;
     max-width: 400px;
     height: 550px;
@@ -28,11 +29,6 @@ button {
 
 button :hover {
     cursor: pointer;
-}
-
-
-button .human-AI :checked {
-    background-color: black;
 }
 
 .header {
